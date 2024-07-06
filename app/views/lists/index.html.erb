@@ -1,0 +1,8 @@
+<h1>All lists</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @lists.each do |list| %>
+    <div class="card h-auto">  <div class="card-category d-flex flex-column justify-content-center" style="background-color: white; height: 250px;">  <p class="text-center"><%= list.name %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

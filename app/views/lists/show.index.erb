@@ -1,0 +1,17 @@
+####jim#####
+<h1>Showing details</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4"> <% @flats.each do |flat| %>
+  <div class="col">
+    <div class="card h-50">
+      <img src="https://i.etsystatic.com/21857164/r/il/8db7cf/5948258627/il_1588xN.5948258627_5xwa.jpg" class="card-img-top" alt="Placeholder image">  <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.address %></p>
+        <p class="card-text"><%= flat.description %></p>
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="card-text">Price: <%= flat.price_per_night %> per night</p>
+          <p class="card-text">Guests: <%= flat.number_of_guests %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
