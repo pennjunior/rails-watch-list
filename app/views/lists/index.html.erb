@@ -1,8 +1,13 @@
-<h1>All lists</h1>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <% @lists.each do |list| %>
-    <div class="card h-auto">  <div class="card-category d-flex flex-column justify-content-center" style="background-color: white; height: 250px;">  <p class="text-center"><%= list.name %></p>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-5 g-4">
+    <% @lists.each do |list| %>
+      <div class="col">
+        <div class="card h-25 ">
+          <%= image_tag "escape_room.jpeg", alt: "Le Wagon"%>  <div class="card-body">
+          <h1 class="card-title text-center "><%= list.name %></h1>
+        </div>
       </div>
     </div>
   <% end %>
+  <div class="card "><h1 class="text-center card-title mb-6 ">New Card<i class="fa-solid fa-plus"></i></h1></div>
 </div>

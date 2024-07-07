@@ -11,6 +11,19 @@
   </head>
 
   <body>
+    <div>
+      <nav class="navbar bg-black">
+        <%= image_tag "movie_logo.png", alt: "Le Wagon", width: 50 %>
+        <form class="d-flex ">
+          <input type="submit" class="" value="My list">
+          <input type="submit" class="" value="New List">
+        </form>
+      </nav>
+    </div>
+    <div class="head-image">
+      <h1 class="text-center">Save Any Kind Of Movie</h1>
+      <h5 class="text-center">Genre</h5>
+    </div>
     <%= yield %>
   </body>
 </html>
