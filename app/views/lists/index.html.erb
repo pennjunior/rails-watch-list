@@ -4,11 +4,19 @@
       <div class="col">
         <div class="card h-25 ">
           <%= image_tag "escape_room.jpeg", alt: "Le Wagon"%>  <div class="card-body">
-          <h1 class="card-title text-center "><%= list.name %></h1>
+          <h1 class="card-title text-center ">
+            <%= link_to list.name, list_path(list), class: "list-link" %>
+          </h1>
         </div>
       </div>
     </div>
   <% end %>
-  <div class="card "><h1 class="text-center card-title mb-6 ">New Card<i class="fa-solid fa-plus"></i></h1></div>
-  <%= link_to "New list", new_list_path  %>
+  <div class="card">
+  <button class="btn btn-success">
+  <h1 class="text-center card-title mb-6">
+  <i class="fa-solid fa-plus" style="color: white;"></i>
+  <%= link_to "New list", new_list_path, class: "text-decoration-none", style: "color: white;"%></h1>
+  </button>
+</div>
+
 </div>
