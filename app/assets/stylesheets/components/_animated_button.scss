@@ -1,0 +1,13 @@
+.my-animated-button:hover,
+.my-animated-button:focus {
+  @include button-animation();
+}
+
+@mixin button-animation {
+  animation: button-grow 0.3s ease-in-out;
+}
+
+@keyframes button-grow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
